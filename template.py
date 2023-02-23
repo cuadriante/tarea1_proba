@@ -11,7 +11,7 @@ Template con lectura de datos en archivo csv
 import numpy as np
 
 input_dir='C:/Users/PATH/' #PATH al archivo de datos, cambiar según cada computadora. Sirve para evitar 'File not found'
-filename=input_dir+'NOMBRE_de_ARCHIVO.csv'
+filename=input_dir+'energydata_complete.csv'
 
 # Esta línea lee la matriz de datos (sin titulos) para números solamente. Otro tipo de variable (texto por ejemplo) se leerá como nan
 datos=np.genfromtxt(filename,delimiter=',',skip_header=1)
