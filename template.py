@@ -49,15 +49,15 @@ print(" mediana: " + str(mediana))
 
 # quartiles
 print(" quartiles: ")
-q1 = 0
+q1 = np.quantile(datos, 0.25, method="higher")
 q2 = mediana
-q3 = 0
+q3 =np.quantile(datos, 0.75, method="higher")
 print("     q1: " + str(q1))
 print("     q2: " + str(q2))
 print("     q3: " + str(q3))
 
 # calculo medidas de dispersion
-print("------------- medidas de dispersión -------------")
+print("\n------------- medidas de dispersión -------------")
 
 # varianza
 var = np.var(datos)
