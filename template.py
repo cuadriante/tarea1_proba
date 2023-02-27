@@ -39,7 +39,7 @@ print(" promedio: " + str(promedio))
 # moda
 mode_result = st.mode(datos, keepdims=True)
 mode = mode_result[0]
-print( " mode: " + str(mode))
+print( " moda: " + str(mode))
 
 # ------------- mediana -------------
 # funcion de numpy: median
