@@ -9,7 +9,7 @@ Template con lectura de datos en archivo csv
 """
 
 import numpy as np
-from scipy import stats as st
+#from scipy import stats as st
 import matplotlib.pyplot as plt
 
 input_dir = 'C:/Users/adri/PycharmProjects/tarea1_proba/'  # PATH al archivo de datos, cambiar según cada computadora. Sirve para evitar 'File not found'
@@ -38,9 +38,11 @@ promedio = np.mean(datos, dtype=np.float64)
 print(" promedio: " + str(promedio))
 
 # moda
+'''
 mode_result = st.mode(datos, keepdims=True)
 mode = mode_result[0]
 print(" moda: " + str(mode))
+'''
 
 # ------------- mediana -------------
 # funcion de numpy: median
