@@ -48,13 +48,23 @@ mediana = np.median(datos)
 print(" mediana: " + str(mediana))
 
 # quartiles
-
+print(" quartiles: ")
+q1 = 0
+q2 = mediana
+q3 = 0
+print("     q1: " + str(q1))
+print("     q2: " + str(q2))
+print("     q3: " + str(q3))
 
 # calculo medidas de dispersion
 print("------------- medidas de dispersión -------------")
 
 # varianza
+var = np.var(datos)
+print(" varianza: " + str(var))
 
 # desviacion estandar
+std = np.std(datos)
+print(" desviacion estandar: " + str(std))
 
 
