@@ -10,6 +10,7 @@ Template con lectura de datos en archivo csv
 
 import numpy as np
 from scipy import stats as st
+import matplotlib.pyplot as plt
 
 input_dir = 'C:/Users/adri/PycharmProjects/tarea1_proba/'  # PATH al archivo de datos, cambiar según cada computadora. Sirve para evitar 'File not found'
 filename = input_dir + 'energydata_complete.csv'
@@ -39,7 +40,7 @@ print(" promedio: " + str(promedio))
 # moda
 mode_result = st.mode(datos, keepdims=True)
 mode = mode_result[0]
-print( " moda: " + str(mode))
+print(" moda: " + str(mode))
 
 # ------------- mediana -------------
 # funcion de numpy: median
@@ -51,7 +52,7 @@ print(" mediana: " + str(mediana))
 print(" quartiles: ")
 q1 = np.quantile(datos, 0.25, method="higher")
 q2 = mediana
-q3 =np.quantile(datos, 0.75, method="higher")
+q3 = np.quantile(datos, 0.75, method="higher")
 print("     q1: " + str(q1))
 print("     q2: " + str(q2))
 print("     q3: " + str(q3))
@@ -67,8 +68,7 @@ print(" varianza: " + str(var))
 std = np.std(datos)
 print(" desviacion estandar: " + str(std))
 
-#coeficiente de variacion
-coef = std/promedio
+# coeficiente de variacion
+coef = std / promedio
 print(" coeficiente de variacion: " + str(coef))
-
 
