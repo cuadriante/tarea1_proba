@@ -9,6 +9,7 @@ Template con lectura de datos en archivo csv
 """
 
 import numpy as np
+from scipy import stats as st
 
 input_dir = 'C:/Users/adri/PycharmProjects/tarea1_proba/'  # PATH al archivo de datos, cambiar según cada computadora. Sirve para evitar 'File not found'
 filename = input_dir + 'energydata_complete.csv'
@@ -22,11 +23,38 @@ datos = np.genfromtxt(filename, delimiter=';', skip_header=1, usecols=(4,))  # o
 # alternativamente, se pueden leer columnas específicas entre el rango [X,Y] de esta forma:
 # datos=np.genfromtxt(filename,delimiter=',',skip_header=1, usecols = range(5,5))
 
-'''
-labels = np.genfromtxt('data.txt', delimiter=',', usecols=0, dtype=str)
-raw_data = np.genfromtxt('data.txt', delimiter=',')[:,1:]
-data = {label: row for label, row in zip(labels, raw_data)}
-'''
-
 print(datos)
 # Su código va aquí...
+
+# !!!!!!!!!!! calculo medidas de tendencia !!!!!!!!!!!!
+print("------------- medidas de tendencia -------------")
+
+# ------------- promedio -------------
+# funcion de numpy: mean
+# recibe: array de datos, tipo de dato
+# se usa float64 para mas precision
+promedio = np.mean(datos, dtype=np.float64)
+print(" promedio: " + str(promedio))
+
+# moda
+mode_result = st.mode(datos, keepdims=True)
+mode = mode_result[0]
+print( " mode: " + str(mode))
+
+# ------------- mediana -------------
+# funcion de numpy: median
+# recibe: array de datos
+mediana = np.median(datos)
+print(" mediana: " + str(mediana))
+
+# quartiles
+
+
+# calculo medidas de dispersion
+print("------------- medidas de dispersión -------------")
+
+# varianza
+
+# desviacion estandar
+
+
