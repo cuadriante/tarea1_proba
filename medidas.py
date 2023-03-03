@@ -71,6 +71,6 @@ std = np.std(datos)
 print(" desviacion estandar: " + str(std))
 
 # coeficiente de variacion
-coef = std / promedio
+coef = (std / promedio)*100
 print(" coeficiente de variacion: " + str(coef))
 
