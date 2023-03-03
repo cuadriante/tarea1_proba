@@ -5,7 +5,7 @@ import medidas
 '''
 ------------- histograma -------------
  funcion de matplotlib: hist
- recibe: array de datos, numero de divisiones del histograma, color de barras
+ recibe: array de datos, numero de divisiones del histograma, color de barras, alpha es intensidad del color
  salida: histograma de los datos
 '''
 num_bins = 10
