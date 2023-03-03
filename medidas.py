@@ -44,11 +44,10 @@ print(" promedio: " + str(promedio))
 '''
 ------------- moda -------------
  funcion de scipy: mode
- recibe: array de datos, keepdims en valor True se usa pra mantener el axis con 
-         valor 1 y poder mostrar el resultado correcto
+ recibe: array de datos
  salida: ndarray con el resultado de las modas (en este caso, solo hay una)
 '''
-mode_result = st.mode(datos, keepdims=True)
+mode_result = st.mode(datos)
 mode = mode_result[0]
 print(" moda: " + str(mode))
 
